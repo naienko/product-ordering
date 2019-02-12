@@ -1,14 +1,14 @@
-const createCard = itemArray => {
-    document.querySelector("#productList").innerHTML = "";
-    itemArray.forEach(element => {
-        document.querySelector("#productList").innerHTML += `<section>
-        <div>${element.title}</div>
-        <div>${element.desc}</div>
-        <div>$${element.price}</div>
-        <div>${element.quant}</div>
-        <div><img src="${element.img}" /></div>
+const whereTheSingleProductGoes = document.querySelector("#productDisplay");
+
+const createCard = singleItemObject => {
+    whereTheSingleProductGoes.innerHTML = "";
+    whereTheSingleProductGoes.innerHTML += `<section>
+        <div>${singleItemObject.name}</div>
+        <div>${singleItemObject.desc}</div>
+        <div>$${singleItemObject.price}</div>
+        <div>${singleItemObject.quantity}</div>
+        <div><img src="${singleItemObject.img}" /></div>
         </section>`;
-    })
 }
 
 export default createCard;
